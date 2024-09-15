@@ -38,4 +38,4 @@ select collections.collection_name from collections
 	join albums on treks.album_id = albums.album_id
 	join artists_materials on albums.album_id = artists_materials.album_id
 	join artists on artists_materials.artist_id = artists.artist_id
-	where artists.artist_name = 'Lana Del Ray';  
+	where artists.artist_name = 'DDT';  
