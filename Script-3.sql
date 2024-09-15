@@ -27,8 +27,7 @@ select albums.album_name, AVG(treks.trek_time) from treks
 
 select artists.artist_name from artists
 	where artists.artist_id not in (
-		select artist_id
-		from artists_materials
+		select artist_id from artists_materials
 		join albums on artists_materials.album_id = albums.album_id
 		where EXTRACT(year from albums.album_data) = 2020
 	);
@@ -40,5 +39,3 @@ select collections.collection_name from collections
 	join artists_materials on albums.album_id = artists_materials.album_id
 	join artists on artists_materials.artist_id = artists.artist_id
 	where artists.artist_name = 'Lana Del Ray';  
-
-
